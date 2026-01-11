@@ -28,6 +28,7 @@ A robust, serverless virtual goods shop built with **Next.js 16**, **Vercel Post
     - 🧾 **Order Center**: Order list and details pages.
     - 🔔 **Pending Order Alert**: Homepage banner reminds users of unpaid orders.
     - 🔄 **Refund Requests**: Users can submit refund requests for admin review (supports client-side & server-side refund).
+    - 💳 **Payment QR**: Admins can generate payment links/QR codes for direct payments without requiring a product.
 - **Admin Console**:
     - 📊 **Sales Stats**: Today/week/month/total overview.
     - ⚠️ **Low Stock Alerts**: Configurable threshold and warnings.
