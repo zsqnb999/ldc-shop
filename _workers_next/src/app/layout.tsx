@@ -111,6 +111,14 @@ export default async function RootLayout({
         ["--theme-primary-dark-l" as any]: themePrimaryDarkL,
       }}
     >
+      <head>
+        {/* Polyfill for esbuild's __name helper - fixes "__name is not defined" error on Cloudflare Workers */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `var __name = function(fn, name) { return Object.defineProperty(fn, "name", { value: name, configurable: true }); };`,
+          }}
+        />
+      </head>
       <body className={cn("min-h-screen bg-background font-sans antialiased", inter.className)}>
         <Providers themeColor={themeColor}>
           <div className="relative flex min-h-screen flex-col">
